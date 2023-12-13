@@ -1,4 +1,4 @@
-import './../scss/main';
+import './../scss/main.scss';
 
 window.addEventListener('DOMContentLoaded', () => {
   const resizableSwiper = (breakpoint, swiperClass, swiperSettings) => {
