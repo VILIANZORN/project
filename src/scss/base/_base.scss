@@ -1,0 +1,70 @@
+.container{
+  margin: 0 auto;
+  @media (min-width: 320px){
+      max-width: 767px;
+  }
+  @media (min-width: 768px){
+      max-width: 1119px;
+  }
+  @media (min-width: 1120px){
+      max-width: 1439px;
+  }
+}
+.container-hm{
+  @media (min-width: 1120px){
+      padding-left: 320px;
+  } 
+}
+.main__container{
+  @media (min-width: 1120px){
+    padding: 42px 0px 0px 0px;
+  }
+}
+
+.main__desktop{
+  @media(min-width: 1120px){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 25px;
+  }
+}
+.position-repair{
+  @media(min-width: 1120px){
+    display: flex;
+    gap: 9px;
+    align-items: center;
+    text-decoration: none;   
+  }  
+}
+.position-checkstatus{
+  @media(min-width: 1120px){
+    display: flex;
+    gap: 9px;
+    align-items: center; 
+    text-decoration: none;
+  }
+}
+.icon-style__position{
+  @media (min-width: 1120px){
+    width: 16px;
+    height: 20px;
+    flex-shrink: 0;
+    position: relative;
+    left: -12px;
+    top: 10px;
+  }
+}
+
+.desktop__buttons-text{
+  @media (min-width: 1120px){
+    color: #1B1C21;
+    text-align: right;
+    font-family: $mainFont;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 150% */
+    letter-spacing: -0.2px;
+  }
+}

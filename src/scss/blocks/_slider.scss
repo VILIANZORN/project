@@ -1,0 +1,112 @@
+  .main__title{
+    padding: 16px 28px;
+    border-top: 1px solid $green-line;
+    background: linear-gradient(270deg, $white-background 0%, $main-background 98.61%);
+    @media (min-width: 1120px){
+        padding-left: 35px;
+    }
+  }
+  .main__title--text{
+    color: #7E7E82;
+    font-family: $mainFont;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: -0.2px;
+    text-transform: uppercase;
+  }
+  
+  .image-slider{
+    padding: 16px;
+    width: 100%;
+    overflow: hidden;
+    @media (min-width: 768px){
+        padding: 24px;
+    }
+    @media (min-width: 1120px){
+        padding-left: 35px;
+    }
+  }
+  .image-slider__image{
+    display: flex;
+    justify-content: space-between;
+    width: 240px;
+    max-height: 72px;
+    padding: 20px 16px;
+    border-radius: 6px;
+    border: 1px solid #EAEAEA;
+    background: $white-background;
+    align-items: center;
+    @media (min-width: 768px){
+        width: 224px;
+    }
+  }
+  .circle-icon{
+    border-radius: 20px;
+    border: 2px solid $button-color;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+  }
+  .image-slider .swiper-pagination-bullet{
+    width: 12px;
+    height: 12px;
+    fill: #DDD;
+    background-color: #B5B6BC;
+  }
+  .image-slider .swiper-pagination{
+    margin-top: 16px;
+    position: static;
+    @media (min-width: 768px) {
+        display: none;
+    }
+  }
+  .image-slider .swiper-slide{
+    width: auto;
+    height: 72px;
+  }
+  .image-slider__wrapper{
+    transition: height 1s ease-in-out;
+    @media (min-width: 768px){
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+        height: 160px;
+        overflow-y: hidden;
+    }
+    @media (min-width: 1120px){
+        column-gap: 32px;
+    }
+  }
+  .show-button{
+    display: none;
+    @media (min-width: 768px){
+        margin-top: 24px;
+        display: flex;
+        gap: 8px;
+    }    
+  }
+  .show-button::before{
+    display: block;
+    background-image: url(.././img/expand.svg);
+    content: "";
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    transition: transform 1s ease;
+  }
+  .show-button--style{
+    color: #1B1C21;
+    font-family: $mainFont;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: -0.2px;
+  }
+
