@@ -1,7 +1,7 @@
 import './../scss/main.scss';
 import Swiper from '../../node_modules/swiper/swiper-bundle';
 
-
+// включение выключение свайпера
 
 window.addEventListener('DOMContentLoaded', () => {
   const resizableSwiper = (breakpoint, swiperClass, swiperSettings) => {
@@ -40,10 +40,13 @@ checker()
   autoHeight: true,
   })
 })
+
+// показать всё в слайдере
 const btn = document.querySelector(".show-button");
 const cards = document.querySelector(".image-slider__wrapper");
 
 btn.addEventListener('click', function () {
+  btn.classList.toggle('show-button--before');
   if (btn.innerHTML === "Показать всё") {
     btn.innerHTML = "Скрыть";
     cards.style.height = getComputedStyle(cards).height; 
@@ -53,9 +56,6 @@ btn.addEventListener('click', function () {
     setTimeout(function() {
       cards.style.height = fullHeight;
     }, 0);
-    const style = document.createElement('style');
-    style.innerHTML = '.show-button::before { transform: rotate(180deg); }';
-    document.head.appendChild(style);
   } else {
     btn.innerHTML = "Показать всё";
     var fullHeight = getComputedStyle(cards).height; 
@@ -63,10 +63,23 @@ btn.addEventListener('click', function () {
     setTimeout(function() {
       cards.style.height = '160px';
     }, 0);
-
-    const style = document.querySelector('style');
-    if (style) {
-      document.head.removeChild(style);
-    }
   }
+});
+
+//  читать далее 
+
+const section_btn = document.querySelector('.section__button');
+const sectionP = document.querySelector(".section__p");
+
+section_btn.addEventListener('click', function () {
+  section_btn.classList.toggle('show-button--before');
+  if (section_btn.innerHTML === "Читать далее"){
+    section_btn.innerHTML = 'Скрыть';
+    sectionP.classList.toggle('section__p-active'); 
+  } else {
+    section_btn.innerHTML = "Читать далее";
+    sectionP.classList.toggle('section__p-active');
+    const style = document.querySelector('style');
+  } 
+  sectionP.style.maxHeight = sectionP.classList.contains("section__p-active") ? `${sectionP.scrollHeight}px` : "160px";
 });

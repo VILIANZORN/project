@@ -68,3 +68,10 @@
     letter-spacing: -0.2px;
   }
 }
+
+// expend.svg поворот
+.show-button--before{
+  &::before{
+    transform: rotate(180deg);
+  }
+}
