@@ -82,6 +82,9 @@
         column-gap: 32px;
     }
   }
+  .image-slider__wrapper--click{
+    height: auto;
+  }
   .show-button{
     display: none;
     @media (min-width: 768px){

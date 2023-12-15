@@ -41,7 +41,24 @@ checker()
   })
 })
 
+// Показать бургер меню
+const burger = document.querySelector(".burger-menu");
+const burgerBtnShow = document.querySelector(".burger");
+const burgerBtnClose = document.querySelector(".button-close--burger");
+const opacityBg = document.getElementById('div_aside');
+
+burgerBtnShow.addEventListener('click', function(){
+  burger.classList.toggle('burger-menu--click');
+  opacityBg.classList.toggle('opacity-bg');
+})
+
+burgerBtnClose.addEventListener('click', function(){
+  burger.classList.toggle('burger-menu--click');
+  opacityBg.classList.toggle('opacity-bg');
+})
+  
 // показать всё в слайдере
+
 const btn = document.querySelector(".show-button");
 const cards = document.querySelector(".image-slider__wrapper");
 
@@ -49,23 +66,13 @@ btn.addEventListener('click', function () {
   btn.classList.toggle('show-button--before');
   if (btn.innerHTML === "Показать всё") {
     btn.innerHTML = "Скрыть";
-    cards.style.height = getComputedStyle(cards).height; 
-    cards.style.height = 'auto'; 
-    var fullHeight = getComputedStyle(cards).height; 
-    cards.style.height = ''; 
-    setTimeout(function() {
-      cards.style.height = fullHeight;
-    }, 0);
+    cards.classList.toggle('image-slider__wrapper--click');
   } else {
     btn.innerHTML = "Показать всё";
-    var fullHeight = getComputedStyle(cards).height; 
-    cards.style.height = fullHeight;
-    setTimeout(function() {
-      cards.style.height = '160px';
-    }, 0);
+    cards.classList.toggle('image-slider__wrapper--click');
   }
+  cards.style.height = cards.classList.contains("image-slider__wrapper--click") ? `${cards.scrollHeight}px` : "160px";
 });
-
 //  читать далее 
 
 const section_btn = document.querySelector('.section__button');
@@ -79,7 +86,6 @@ section_btn.addEventListener('click', function () {
   } else {
     section_btn.innerHTML = "Читать далее";
     sectionP.classList.toggle('section__p-active');
-    const style = document.querySelector('style');
   } 
   sectionP.style.maxHeight = sectionP.classList.contains("section__p-active") ? `${sectionP.scrollHeight}px` : "160px";
 });
