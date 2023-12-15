@@ -887,6 +887,9 @@ legend {
     /* 150% */
     letter-spacing: -0.2px; } }
 
+.show-button--before::before {
+  transform: rotate(180deg); }
+
 .burger-menu {
   width: 320px;
   max-height: 1925px;
@@ -1237,21 +1240,21 @@ legend {
   font-style: normal;
   font-weight: 400;
   line-height: 18px;
-  /* 128.571% */
   letter-spacing: 0.2px;
   overflow-y: hidden;
   margin: 0;
-  white-space: pre-wrap; }
+  transition: max-height 2s ease-in-out; }
   @media (min-width: 768px) {
     .section__p {
-      min-height: 160px;
-      width: 312px;
-      white-space: pre-wrap; } }
+      max-height: 160px;
+      width: 312px; } }
   @media (min-width: 1120px) {
     .section__p {
-      min-height: 160px;
-      width: 490px;
-      white-space: pre-wrap; } }
+      max-height: 160px;
+      width: 490px; } }
+
+.section__p-active {
+  max-height: auto; }
 
 .section__button {
   margin-top: 16px;
@@ -1267,7 +1270,8 @@ legend {
   background-image: url(./static/expand.svg);
   background-repeat: no-repeat;
   width: 24px;
-  height: 24px; }
+  height: 24px;
+  transition: transform 2s ease-in-out; }
 
 .section__button--style {
   color: #1B1C21;
