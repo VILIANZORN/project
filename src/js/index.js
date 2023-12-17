@@ -53,6 +53,20 @@ checker()
   spaceBetween: 16,
   autoHeight: true,
   })
+
+  resizableSwiper('(max-width: 767.5px)', '.box-slider', {
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  mousewheel: {
+      sensitivity: 1,
+      eventsTarget:".box-slider"
+  },
+  slidesPerView: 'auto',
+  spaceBetween: 16,
+  autoHeight: true,
+  })
 })
 
 
