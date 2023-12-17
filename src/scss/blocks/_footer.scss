@@ -12,6 +12,9 @@
     justify-content: space-between;
     gap: 0;
   }
+  @media(min-width: 1120px){
+    margin-left: 320px;
+  }
 }
 .main-footer__text{
   width: 312px;

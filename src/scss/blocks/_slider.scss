@@ -132,6 +132,9 @@
   font-weight: 500;
   line-height: 16px; /* 114.286% */
   opacity: 0.7218;
+  @media (min-width: 768px){
+    display: none;
+  }
 }
 .block-slider__text{
   width: 240px;
@@ -224,7 +227,12 @@
 
 // слайдер Цены на услуги
 .box-slider__wrapper{
-  height: 200px !important; 
+  @media(max-width: 768px){
+    height: 200px !important; 
+  }
+  @media(min-width: 768px){
+    display: block !important;
+  }
 }
 .box-slider{
   padding: 16px;
@@ -232,9 +240,6 @@
   overflow: hidden;
   @media (min-width: 768px){
       padding: 24px;
-  }
-  @media (min-width: 1120px){
-      padding-left: 35px;
   }
 }
 .box-slider .swiper-pagination-bullet{
@@ -252,7 +257,9 @@
 }
 .box-slider .swiper-slide{
   width: auto;
-  height: 160px;
+  @media(max-width: 768px){
+    height: 160px;
+  }
 }
 .box-slider__card{
   width: 260px;
@@ -269,9 +276,19 @@
             "item2 item2 item2 item2"
             "item3 item3 item4 item4";
   grid-row-gap: 16px;
+  @media(min-width: 768px){
+    display: flex;
+    justify-content: space-between;
+    height: 64px;
+    border-bottom: 1px rgba(234, 234, 234, 1) solid;
+    width: auto;
+  }
 }
 .box-slider-item1{
   grid-area: item1;
+  @media(min-width: 768px){
+    width: 50%;
+  }
 }
 .box-slider-item2{
   grid-area: item2;
@@ -295,6 +312,9 @@
   background-image: url(.././img/swiper_logo/dropdown.svg);
   background-position: center right 10px;
   background-repeat: no-repeat;
+  @media(min-width: 768px){
+    align-self: center;
+  }
 }
 .slider-link--style{
   color: #FFF;
@@ -343,3 +363,32 @@
   background-position: top 5px right;
   padding-right: 15px;
 }
+// Сектион в слайдере о цене
+.section-slider{
+  display: none;
+}
+@media(min-width: 768px){
+  .section-slider{
+    width: 100%;
+    background-color: rgba(248, 248, 248, 1);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 16px 16px;
+  }
+  .section-slider--text{
+    color: #7E7E82;
+    font-family: $mainFont;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px; /* 114.286% */
+    opacity: 0.7218;
+  }
+  .section-slider--empty{
+    width: 120px;
+  }
+  .section-slider--item1{
+    width: 50%;
+  }
+}
+
