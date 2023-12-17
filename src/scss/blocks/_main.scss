@@ -139,7 +139,7 @@
   letter-spacing: 0.2px;
   overflow-y: hidden;
   margin: 0;
-  transition: max-height 2s ease-in-out; 
+  transition: max-height 1s ease-in-out; 
   @media(min-width: 768px){
       max-height: 160px;
       width: 312px;
@@ -169,7 +169,7 @@
   background-repeat: no-repeat;
   width: 24px;
   height: 24px;
-  transition: transform 2s ease-in-out;
+  transition: transform 1s ease-in-out;
 }
 .section__button--style{
   color: #1B1C21;
