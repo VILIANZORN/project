@@ -114,3 +114,147 @@
     letter-spacing: -0.2px;
   }
 
+// Ремонт различных видов техники свайпер
+
+.block-slider__text{
+  width: 240px;
+  height: 160px;
+  flex-shrink: 0;
+  border-radius: 6px;
+  border: 1px solid $border-slider;
+  background: $white-background;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.circle-icon--abs{
+  align-self: self-end;
+}
+
+.block-slider__text--style{
+  color: #1B1C21;
+  font-family: $mainFont;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+}
+
+.block-slider{
+  padding: 16px;
+  width: 100%;
+  overflow: hidden;
+  @media (min-width: 768px){
+      padding: 24px;
+  }
+  @media (min-width: 1120px){
+      padding-left: 35px;
+  }
+}
+.block-slider__wrapper{
+  transition: height 1s ease-in-out;
+  @media (min-width: 768px){
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      height: 160px;
+      overflow-y: hidden;
+  }
+  @media (min-width: 1120px){
+      column-gap: 32px;
+  }
+}
+.block-slider__wrapper--click{
+  height: auto;
+}
+.block-slider .swiper-pagination-bullet{
+  width: 12px;
+  height: 12px;
+  fill: #DDD;
+  background-color: #B5B6BC;
+}
+.block-slider .swiper-pagination{
+  margin-top: 16px;
+  position: static;
+  @media (min-width: 768px) {
+      display: none;
+  }
+}
+.block-slider .swiper-slide{
+  width: auto;
+  height: 160px;
+}
+.show-button-secSlider{
+  display: none;
+  @media (min-width: 768px){
+      margin-top: 24px;
+      display: flex;
+      gap: 8px;
+  }    
+}
+.show-button-secSlider::before{
+  display: block;
+  background-image: url(.././img/expand.svg);
+  content: "";
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  transition: transform 1s ease;
+}
+
+// слайдер Цены на услуги
+.box-slider__card{
+  width: 260px;
+  height: 200px;
+  flex-shrink: 0;
+  border-radius: 6px;
+  background: #FFF;
+  display: grid;
+  // grid-row: 1fr 1fr 1fr;
+  // grid-column: 1fr 1fr 1fr;
+  gap: 5px;
+}
+
+
+//Информация после слайдера Цены на услуги
+.price-swiper{
+  padding: 0 16px 25px;
+  color: #1B1C21;
+  font-family: $mainFont;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+  letter-spacing: 0.2px;
+}
+.price-swiper-box{
+  padding: 0 24px 40px 16px;
+  max-width: max-content;
+}
+.price-swiper-box--link{
+  color: #1B1C21;
+  font-family: $mainFont;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  position: relative;
+  &::after{
+    display: block;
+    position: absolute;
+    left: 105px;
+    top: 25px;
+    background-image: url(.././img/swiper_logo/Line.svg);
+    background-position: 50% 50%;
+    content: "";
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    fill: $button-color;
+  }
+}

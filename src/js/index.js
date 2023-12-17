@@ -39,7 +39,23 @@ checker()
   spaceBetween: 16,
   autoHeight: true,
   })
+
+  resizableSwiper('(max-width: 767.5px)', '.block-slider', {
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  mousewheel: {
+      sensitivity: 1,
+      eventsTarget:".block-slider"
+  },
+  slidesPerView: 'auto',
+  spaceBetween: 16,
+  autoHeight: true,
+  })
 })
+
+
 
 // Показать бургер меню
 const burger = document.querySelector(".burger-menu");
@@ -57,7 +73,7 @@ burgerBtnClose.addEventListener('click', function(){
   opacityBg.classList.toggle('opacity-bg');
 })
   
-// показать всё в слайдере
+// показать всё в слайдере ремонт техники различных брендов
 
 const btn = document.querySelector(".show-button");
 const cards = document.querySelector(".image-slider__wrapper");
@@ -73,6 +89,23 @@ btn.addEventListener('click', function () {
   }
   cards.style.height = cards.classList.contains("image-slider__wrapper--click") ? `${cards.scrollHeight}px` : "160px";
 });
+
+// показать всё в слайдере ремонт различных видов техники
+const btn2 = document.querySelector(".show-button-secSlider");
+const cards2 = document.querySelector(".block-slider__wrapper");
+
+btn2.addEventListener('click', function () {
+  btn2.classList.toggle('show-button--before');
+  if (btn2.innerHTML === "Показать всё") {
+    btn2.innerHTML = "Скрыть";
+    cards2.classList.toggle('image-slider__wrapper--click');
+  } else {
+    btn2.innerHTML = "Показать всё";
+    cards2.classList.toggle('image-slider__wrapper--click');
+  }
+  cards2.style.height = cards2.classList.contains("image-slider__wrapper--click") ? `${cards2.scrollHeight}px` : "160px";
+});
+
 //  читать далее 
 
 const section_btn = document.querySelector('.section__button');
