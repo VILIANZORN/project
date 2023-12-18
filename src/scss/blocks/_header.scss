@@ -1,7 +1,6 @@
 .header{
   display: flex;  
   justify-content: space-between;
-  margin-top: 9px;
   padding: 24px 16px;
   align-items: center;
   border-bottom: 1px solid $green-line;
@@ -30,8 +29,11 @@
   border-radius: 20px;
   background: $button-color;
   transition-duration: 0.5s;
-  transition-property: opacity;
+  transition-property: background-color;
   transition-timing-function: ease;
+  &:hover{
+    background-color: black;
+  }
 }
 .burger__icon{
   position: relative;

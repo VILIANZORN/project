@@ -51,6 +51,10 @@
     display: flex;
     align-items: center;
     padding-left: 15px;
+    transition: border-color 1s ease;
+    &:hover{
+      border-color: black;
+    }
   }
   .image-slider .swiper-pagination-bullet{
     width: 12px;
@@ -312,6 +316,10 @@
   background-image: url(.././img/swiper_logo/dropdown.svg);
   background-position: center right 10px;
   background-repeat: no-repeat;
+  transition: background-color 1s ease;
+  &:hover{
+    background-color: black;
+  }
   @media(min-width: 768px){
     align-self: center;
   }
@@ -360,8 +368,12 @@
   letter-spacing: -0.2px;
   background-image: url(.././img/swiper_logo/Line.svg);
   background-repeat: no-repeat;
-  background-position: top 5px right;
+  background-position: top 6px right;
   padding-right: 15px;
+  transition: color 1s ease;
+  &:hover{
+    color: $button-color;
+  }
 }
 // Сектион в слайдере о цене
 .section-slider{
