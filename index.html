@@ -7,8 +7,52 @@
 <link href="style.css" rel="stylesheet"></head>
 <body>
     <div class="container">
-        <div id="div_aside">
-            <aside class="burger-menu">
+        <aside class="aside-chat">
+                <button class="icon-style aside-chat__close-btn">
+                    <img src="./img/burger_close.svg" alt="Закрыть меню">
+                </button>
+                <h2 class="aside-chat__title aside-chat__title--style">Обратная связь</h2>
+                <form class="form-chat" action="" method="get">
+                    <p class="form-chat__block">
+                        <input class="form-chat__input--style form-chat__input" type="text" placeholder="Имя" required>
+                    </p>
+                    <p class="form-chat__block">
+                        <input class="form-chat__input--style form-chat__input" type="tel" placeholder="Телефон" required>
+                    </p>
+                    <p class="form-chat__block">
+                        <input class="form-chat__input--style form-chat__input" type="email" placeholder="Электронная почта" required>
+                    </p>
+                    <p class="form-chat__block">
+                        <input class="form-chat__input--style form-chat__input form-chat__input--message" type="text" placeholder="Сообщение" required>
+                    </p>
+                    <p class="form-chat__text--style">
+                        Нажимая “отправить”, вы даете согласие на
+                        <a class="text__link--style">обработку персональных данных</a> и соглашаетесь с нашей <a class="text__link--style">политикой 
+                        конфиденциальности</a>
+                    </p>
+                    <button class="form-chat__btn form-chat__btn--style" type="submit">Отправить</button>
+                </form>
+        </aside>
+        <div id="div-aside-chat"></div>
+        <aside class="aside-phone">
+                <button class="icon-style aside-phone__close-btn">
+                    <img src="./img/burger_close.svg" alt="Закрыть меню">
+                </button>
+                <h2 class="aside-phone__title aside-phone__title--style">Заказать звонок</h2>
+                <form class="form-phone" action="" method="get">
+                    <p>
+                        <input class="form-phone__input--style form-phone__input" type="tel" placeholder="Телефон" required>
+                    </p>
+                    <p class="form-phone__text form-phone__text--style">
+                        Нажимая “отправить”, вы даете согласие на
+                        <a class="text__link--style">обработку персональных данных</a> и соглашаетесь с нашей <a class="text__link--style">политикой 
+                        конфиденциальности</a>
+                    </p>
+                    <button class="form-phone__btn form-phone__btn--style" type="submit">Отправить</button>
+                </form>
+        </aside>
+        <div id="div-aside-phone"></div>  
+        <aside class="burger-menu">
         <header class="burger-menu__cap">
             <button class="icon-style button-close--burger">
                 <img src="./img/burger_close.svg" alt="Закрыть меню">
@@ -49,10 +93,10 @@
             </nav>
             <footer class="burger-menu__footer">
                 <div class="footer-menu">
-                    <button class="icon-style footer-menu__button">
+                    <button class="icon-style footer-menu__button" id="phone-button1">
                         <img src="./img/call.svg" alt="звонок">
                     </button>   
-                    <button class="icon-style footer-menu__button">
+                    <button class="icon-style footer-menu__button" id="chat-button1">
                         <img src="./img/chat.svg" alt="чат">
                     </button>   
                     <button class="icon-style footer-menu__button">
@@ -76,8 +120,8 @@
                 </ul>
             </footer>
         </div>           
-            </aside>
-        </div>
+        </aside>
+        <div id="div-aside-burger"></div>
         <div class="container-hm">
             <header class="header">
         <div class="menu">
@@ -91,10 +135,10 @@
         
         <div class="buttons">
             <div class="buttons__add">
-                <button class="icon-style">
+                <button class="icon-style" id="phone-button2">
                     <img src="./img/call.svg" alt="кнопка вызова">
                 </button>
-                <button class="icon-style burger__icon">
+                <button class="icon-style burger__icon" id="chat-button2">
                     <img src="./img/chat.svg" alt="кнопка чата">
                 </button>
                 <button class="icon-style">
